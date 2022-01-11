@@ -13,13 +13,11 @@ with open('words.txt', 'r') as file:
     while guess_round != 0 and word != guess:
         for x in word:
             if x == guess:
-                word_index = word.index(x)
-                print('_' * (len(word)-1), word_index[x])
-            elif x != guess:
-                guess = input("Wrong guess! Try again: ")
-            else:
-                print('X')
-                guess_round -= 1
-                guess_no += 1
+                print(x,)
+        if x != guess:
+            print('_' * (len(word)-1))
+            guess_round -= 1
+            guess_no += 1
         guess = input("Guess a letter!: ")
+        continue
 print("You guessed it!")
